@@ -1,0 +1,74 @@
+namespace MichelleMuliawan
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void BtProses_Click(object sender, EventArgs e)
+        {
+            double gp = int.Parse(textBox4.Text);
+            double tj = int.Parse(textBox5.Text);
+            double gb = int.Parse(textBox6.Text);
+            double pj = int.Parse(textBox7.Text);
+
+            double bruto = gp + tj;
+            textBox6.Text = bruto.ToString();
+
+            double tg = gb - pj;
+            textBox8.Text = tg.ToString();
+
+            if (textBox3.Text.ToString() == "Staff")
+            {
+                tj = 0;
+                textBox5.Text = tg.ToString();
+            }
+            else if (textBox3.Text.ToString() == "Sekretaris")
+            {
+                tj = gp * 0.025;
+                textBox5.Text = tg.ToString();
+            }
+            else if (textBox3.Text.ToString() == "Supervisor")
+            {
+                tj = gp * 0.05;
+                textBox5.Text = tg.ToString();
+            }
+            else if (textBox3.Text.ToString() == "Manager")
+            {
+                tj = gp * 0.1;
+                textBox5.Text = tg.ToString();
+            }
+
+            if (gp <= 5000000)
+            {
+                pj = gp * 0.05;
+                textBox7.Text = tg.ToString();
+            }
+            else if (gp > 5000000)
+            {
+                pj = gp * 0.1;
+                textBox7.Text = tg.ToString();
+            }
+            
+        }
+
+        private void BtHapus_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+        }
+
+        private void BtKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
