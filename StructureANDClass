@@ -1,0 +1,158 @@
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+
+using namespace std;
+
+struct Siswa {
+    string nim;
+    string nama;
+    string sks;
+    unsigned int uangSaku;
+};
+
+int main()
+
+{   struct Siswa siswa01,siswa02, siswa03, siswa04, siswa05;
+
+    siswa01.nim = "101";
+    siswa01.nama = "Benny";
+    siswa01.sks = "22";
+
+    siswa02.nim = "103";
+    siswa02.nama = "Bobby";
+    siswa02.sks = "18";
+
+    siswa03.nim = "105";
+    siswa03.nama = "Bima";
+    siswa03.sks = "24";
+    
+    siswa04.nim = "110";
+    siswa04.nama = "Berta";
+    siswa04.sks = "21";
+    
+    siswa05.nim = "112";
+    siswa05.nama = "Bonna";
+    siswa05.sks = "23";
+    
+    cout << "NIM" << "\t" << "NAMA" << "\t" << "SKS" << "\t" << "UANG KULIAH" << "\n";
+    cout << siswa01.nim << "\t" << siswa01.nama << "\t" << siswa01.sks << "\n";
+    cout << siswa02.nim << "\t" << siswa02.nama << "\t" << siswa02.sks << "\n";
+    cout << siswa03.nim << "\t" << siswa03.nama << "\t" << siswa03.sks << "\n";
+    cout << siswa04.nim << "\t" << siswa04.nama << "\t" << siswa04.sks << "\n";
+    cout << siswa05.nim << "\t" << siswa05.nama << "\t" << siswa05.sks << "\n";
+    
+    return 0;
+}
+ 
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct uang{
+    int ukp = 800000;
+    int ikm = 65000;
+    int pendaftaran = 35000;
+    int ukawal = ukp+ikm+pendaftaran;
+};
+
+struct mahasiswa{
+    string nim,nim1,nim2;
+    string nama,nama1,nama2;
+    int sks,sks1,sks2;
+    int uang_kuliah;
+    uang uk;
+};
+
+int main()
+{
+    mahasiswa mhs;
+    mhs.nim1 = "101";
+    mhs.nama1 = "Benny";
+    mhs.sks1 = 22;
+    mhs.uang_kuliah = mhs.sks1*100000+mhs.uk.ukawal;
+    
+   cout << "Masukkan NIM ke-2: ";
+   cin >> mhs.nim2;
+  cout << "Masukkan Nama ke-2: ";
+  cin >> mhs.nama2;
+  cout << "Masukkan SKS ke-2: ";
+  cin >> mhs.sks2;
+  cout << "\n";
+
+    mahasiswa Mhs[28];
+    int i;
+  
+    for (i=0; i<28; i++)
+    {
+        cout<<"NIM ke-" <<3+i<< ": ";
+        cin>>Mhs[i].nim;
+        cout<<"Nama ke-" <<3+i<< ": ";
+        cin>>Mhs[i].nama;
+        cout<<"SKS ke-" <<3+i<< ": ";
+        cin>>Mhs[i].sks;
+        cout<<"\n";
+    }
+
+    cout<< "NIM" << "\t" << "NAMA" << "\t" << "SKS" << "\t" << "UANG KULIAH" << "\n";
+    cout << mhs.nim1 << "\t" << mhs.nama1 << "\t" << mhs.sks1 << "\t" << mhs.uang_kuliah << "\n";
+    
+    cout << mhs.nim2 << "\t" << mhs.nama2 << "\t" << mhs.sks2 << "\t" << mhs.sks2*100000+mhs.uk.ukawal << "\n";
+  
+    for(i=0; i<28; i++)
+    {
+        cout << Mhs[i].nim << "\t" << Mhs[i].nama << "\t" << Mhs[i].sks << "\t" << 
+        Mhs[i].sks*100000+Mhs[i].uk.ukawal << "\n";
+    }
+    
+    return 0;
+} 
+      
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class luas{
+    public:
+    void lpp(float,float);
+    void lbs(float);
+    private:
+    float atr1,atr2,atr3;
+};
+
+void luas::lpp(float x,float y){
+    atr1=x;
+    atr2=y;
+    atr3=atr1*atr2;
+    cout<< "Luas Persegi Panjang: " << atr3;
+}
+
+void luas::lbs(float x){
+    atr1=x;
+    atr3=atr1*atr1;
+    cout<< "Luas Bujur Sangkar: " << atr3;
+}
+
+int main()
+{  
+    luas x;
+    float atr1, atr2;
+    cout << "Panjang: ";
+    cin >> atr1;
+    cout << "Lebar: ";
+    cin >> atr2;
+    cout << "Sisi: ";
+    cin >> atr1;
+    x.lpp(atr1,atr2);
+    cout<<endl;
+    x.lbs(atr1);
+    
+    return 0;
+}
+ 
