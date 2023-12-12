@@ -1,0 +1,39 @@
+namespace Tugas1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label1.Visible = false;
+            pictureBox1.Visible = false;
+
+            int A, B, C;
+            Random random = new Random();
+            A = random.Next(1, 10);
+            B = random.Next(1, 10);
+            C = random.Next(1, 10);
+
+            textBox1.Text = A.ToString();
+            textBox2.Text = B.ToString();
+            textBox3.Text = C.ToString();
+
+            if (A == 7 || B == 7 || C == 7)
+            { 
+                MessageBox.Show("ANDA BERUNTUNG");
+                pictureBox1.Show();
+            }
+            else
+                MessageBox.Show("Anda belum beruntung... COBA LAGI");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
