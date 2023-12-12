@@ -1,0 +1,57 @@
+#NO1
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x[12];
+    int jumlah;
+    cout<<"Masukkan 12 angka dengan spasi: ";
+    for (int i=0;i<12;i++)
+    cin>>x[i];
+    
+    jumlah=0;
+    for (int i=0;i<12;i++){
+        jumlah=jumlah+x[i];
+    }
+    cout<<"Jumlah Angka: "<<jumlah;
+
+    return 0;
+    
+}
+
+
+#NO2
+
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+int main()
+{
+    char s1[20];
+    char s2[20];
+    char s3[20];
+    char s4[] = "Fakultas Teknik berdiri pada tanggal 01-07-1961";
+    
+    cout << "Masukkan kata: ";
+    cin  >> s1;
+    
+    strcpy (s2, "Pagi ");
+    strcpy (s3, s2);
+    strcat (s3, s1);
+
+    cout << s1 << "\n";
+    cout << s2 << "\n";
+    cout << s3 << "\n";
+    cout << s4 << "\n";
+
+    int x = strlen(s3);
+    cout << "Panjang s3 = " << x;
+    
+    return 0;
+    
+}
