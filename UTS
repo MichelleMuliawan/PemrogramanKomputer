@@ -1,0 +1,98 @@
+#include <iostream>
+using namespace std;
+
+struct mahasiswa{
+    string nama;
+    string fakultas;
+    int tm;
+    int tl;
+    int ls;
+};
+
+int main()
+{
+    mahasiswa Mhs[5];
+    int i;
+  
+    for (i=0; i<5; i++)
+    {
+        cout<<"Nama: ";
+        cin>>Mhs[i].nama;
+        cout<<"Fakultas: ";
+        cin>>Mhs[i].fakultas;
+        cout<<"Tahun Masuk: ";
+        cin>>Mhs[i].tm;
+        cout<<"Tahun Lulus: ";
+        cin>>Mhs[i].tl;
+        cout<<"\n";
+    }
+
+    cout<< "Nama" << "\t" << "Fakultas" << "\t" << "Tahun Masuk" << "\t" << "Tahun Lulus" << "\t" <<
+    "Lama Studi" << "\n";
+    
+    for(i=0; i<5; i++)
+    {
+        cout << Mhs[i].nama << "\t" << Mhs[i].fakultas << "\t\t" << Mhs[i].tm << "\t\t" << Mhs[i].tl << "\t\t" <<
+        Mhs[i].tl-Mhs[i].tm << "\n";
+    }
+
+    return 0;
+}
+ 
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+#include <iostream>
+using namespace std;
+
+class mahasiswa{
+    public:
+    string nama;
+    string fakultas;
+    int lama_studi(int,int);
+    int tm,tl;
+    private:
+    int ls;
+};
+
+int mahasiswa::lama_studi(int x,int y){
+    tm=x;
+    tl=y;
+    ls=tl-tm;
+    cout << ls;
+    {
+        return (tm,tl);
+    }
+}
+
+int main()
+{  
+    mahasiswa x;
+    mahasiswa Mhs[3];
+    int i,tm,tl;
+  
+    for (i=0; i<3; i++)
+    {
+        cout<<"Nama: ";
+        cin>>Mhs[i].nama;
+        cout<<"Fakultas: ";
+        cin>>Mhs[i].fakultas;
+        cout<<"Tahun Masuk: ";
+        cin>>Mhs[i].tm;
+        cout<<"Tahun Lulus: ";
+        cin>>Mhs[i].tl;
+        cout<<"\n";
+    }
+
+    cout<< "Nama" << "\t" << "Fakultas" << "\t" << "Tahun Masuk" << "\t" << "Tahun Lulus" << "\t" <<
+    "Lama Studi" << "\n";
+    
+    for(i=0; i<3; i++)
+    {
+        cout << Mhs[i].nama << "\t" << Mhs[i].fakultas << "\t\t" << Mhs[i].tm << "\t\t" << Mhs[i].tl << "\t\t";
+        Mhs[i].lama_studi(Mhs[i].tm, Mhs[i].tl);
+        cout << "\n";
+    }
+
+    return 0;
+}
+ 
